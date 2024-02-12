@@ -12,6 +12,7 @@ class MainApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+        debugShowCheckedModeBanner: false,
         //app contains both themes, dark and light which can be changed thourhg phones theme settings
         theme: lightMode,
         darkTheme: darkMode,
