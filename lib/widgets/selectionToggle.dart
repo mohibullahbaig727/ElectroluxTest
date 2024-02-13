@@ -16,12 +16,18 @@ class _SelectionToggleState extends State<SelectionToggle> {
   Widget build(BuildContext context) {
     return Padding(
         padding: const EdgeInsets.all(8),
-        child: Row(children: [
-          Expanded(
-              child: Text(
-            'Selection ${toggleValue ? 'Enabled' : 'Disabled'}',
-            style: Theme.of(context).textTheme.headlineMedium,
-          )),
+        child:
+            Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+          //animation for heading changing
+          AnimatedSwitcher(
+            duration: Duration(milliseconds: 300),
+            child: Text(
+              'Selection ${toggleValue ? 'Enabled' : 'Disabled'}',
+              key: ValueKey<bool>(toggleValue),
+              style: Theme.of(context).textTheme.headlineMedium,
+            ),
+          ),
+
           SwitcherButton(
             value: toggleValue,
             onChange: (value) {
