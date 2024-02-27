@@ -1,4 +1,4 @@
-# electrolux_test
+# Info
 
 A project which includes a list of items. 
 
